@@ -1,0 +1,48 @@
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(../../lib/font/Raleway/Raleway.css);
+// @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+// Background of the presentation
+$backgroundColor: rgb(31, 30, 28);
+
+// Primary/body text
+$mainFont: 'Raleway', sans-serif;
+$mainFontSize: 40px;
+$mainColor: rgba(255, 251, 219, 1);
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'Raleway', sans-serif;
+$headingColor: rgba(255, 251, 219, 1);
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingTextShadow: none;
+$headingFontWeight: 800;
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: rgb(120, 219, 255);
+
+$heading1Size: 6em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+$heading4Size: 1.00em;
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+span.earth {
+  font-size: .6em;
+}
+
+h1.emojiMaps {
+  line-height: .65em;
+}
