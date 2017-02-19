@@ -47,7 +47,7 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 6em; }
+  font-size: 5em; }
 
 .reveal h2 {
   font-size: 2.11em; }
@@ -288,3 +288,10 @@ span.earth {
 
 h1.emojiMaps {
   line-height: .65em; }
+
+.reveal section img {
+  margin: 0;
+  border: 0; }
+
+.reveal a {
+  text-decoration: underline; }

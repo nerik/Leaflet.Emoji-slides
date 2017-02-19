@@ -29,7 +29,7 @@ $heading1TextShadow: $headingTextShadow;
 // Links and actions
 $linkColor: rgb(120, 219, 255);
 
-$heading1Size: 6em;
+$heading1Size: 5em;
 $heading2Size: 2.11em;
 $heading3Size: 1.55em;
 $heading4Size: 1.00em;
@@ -45,4 +45,13 @@ span.earth {
 
 h1.emojiMaps {
   line-height: .65em;
+}
+
+.reveal section img {
+  margin: 0;
+  border: 0;
+}
+
+.reveal a {
+  text-decoration: underline;
 }
