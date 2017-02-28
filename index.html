@@ -34,7 +34,7 @@
         <section>
           <h1>👋</h1>
           <h2>
-            Hi, I'm Erik
+            Hi, I'm Erik / <a href="https://twitter.com/nerik">@nerik</a><br>
           <h2>
         </section>
 
@@ -56,8 +56,8 @@
 
         <section data-background-image="img/FOSS4G.png" data-background-size="contain"></section>
         <section data-background-image="img/FOSS4G2.png" data-background-size="contain"></section>
-        <section data-background-image="img/FOSS4G-cli1.5.gif" data-background-size="contain"></section>
-        <section data-background-image="img/FOSS4G-cli1.gif" data-background-size="contain"></section>
+        <!-- <section data-background-image="img/FOSS4G-cli1.5.gif" data-background-size="contain"></section> -->
+        <!-- <section data-background-image="img/FOSS4G-cli1.gif" data-background-size="contain"></section> -->
         <section data-background-image="img/FOSS4G-cli2.gif" data-background-size="contain"></section>
 
         <section>
@@ -132,12 +132,12 @@
         </section>
         <section data-background-image="img/emoji-keyboard.jpg" data-background-size="contain"></section>
         <section data-background-image="img/redac.png" data-background-size="contain"></section>
-        <section>
+        <!-- <section>
           <img src="img/twitter.png">
           <h3>
             map minimalism
           </h3>
-        </section>
+        </section> -->
         <section data-background-image="img/flags.png" data-background-size="contain"></section>
         <section data-background-image="img/flags2.png" data-background-size="contain"></section>
         <section data-background-image="img/timezones.png" data-background-size="contain"></section>
@@ -171,17 +171,17 @@
         <section data-background-image="img/landcover-iledere.jpg" data-background-size="contain"></section>
         <section data-background-image="img/landcover-iledere2.jpg" data-background-size="contain"></section>
         <section>
-          <h3>(a truly lovely place)</h3>
-        </section>
-        <section>
-          <h3>the end of legends ?</h3>
+          <h3>The End of Legends ?</h3>
         </section>
         <section data-background-image="img/landcover-carto.png" data-background-size="contain"></section>
         <section data-background-image="img/landcover-carto-legend.png" data-background-size="contain"></section>
         <section data-background-image="img/landcover1.png" data-background-size="contain"></section>
         <section data-background-image="img/landcover-legend.png" data-background-size="contain"></section>
         <section>
-          <h3>Inspiration: gj2ascii, and Twitter bots:</h3>
+          <h3>Inspiration:<br><ul>
+            <li>gj2ascii</li>
+            <li>some Twitter bots:</li>
+          </h3>
         </section>
         <section>
           <img src="img/landcover-emojiatlas.png" alt="">
@@ -245,7 +245,7 @@
 
         <section>
           <h2 style="text-transform: uppercase">
-            <p class="fragment">The</p>
+            <p>The</p>
             <p class="fragment">Unicode</p>
             <p class="fragment">Consortium</p>
             <p class="fragment">Emoji</p>
@@ -282,7 +282,7 @@
 
         <section data-background-image="img/unicode.png" data-background-size="contain"></section>
         <section data-background-image="img/unicode-colbert.jpg" data-background-size="contain"></section>
-        <section data-background-image="img/unicode-nextversion.png" data-background-size="contain"></section>
+        <!-- <section data-background-image="img/unicode-nextversion.png" data-background-size="contain"></section> -->
         <section data-background-image="img/unicode-medieval.png" data-background-size="contain"></section>
 
         <section>
@@ -349,7 +349,7 @@
         <section data-background-image="img/NYC3.png" data-background-size="contain"></section>
 
         <section>
-          <h3>Emojis are using the Fitzpatrick scale<br></h3>
+          <h3>Emojis are using the<br>Fitzpatrick scale<br></h3>
         </section>
         <section data-background-image="img/fitzpatrick.png" data-background-size="contain"></section>
 
@@ -419,8 +419,9 @@
         <section data-background-image="img/chernoff1.png" data-background-size="contain"></section>
 
         <section>
-          <h3>The idea: use facial features (mouth expression, nose size, eyebrows orientation)<br>
-          to encode multiple variables (unemployment, divorce rate, women in work force)</h3>
+          <h3>The idea: <br>
+            Use facial features <br><em>(mouth expression, nose size, eyebrows orientation)</em><br>
+          to encode multiple variables<br><em>(unemployment, divorce rate, women in work force)</em></h3>
         </section>
 
         <section>
@@ -429,7 +430,7 @@
         <section data-background-image="img/chernoff4.png" data-background-size="contain"></section>
 
         <section>
-          <h3>We're much better at understanding a face at aglance than a column of numbers</h3>
+          <h3>We're much better at understanding a face at a glance than a column of numbers</h3>
         </section>
 
         <section>
@@ -465,6 +466,20 @@
         <section data-background-image="img/hdi.png" data-background-size="contain"></section>
         <section data-background-image="img/NYC2.png" data-background-size="contain"></section>
 
+        <section>
+          <h3>
+            Voilà 👏
+            <br>Merci 🙏
+          </h3>
+        </section>
+
+        <section>
+          <h3>
+            <a href="https://nerik.github.io/Leaflet.Emoji">nerik.github.io/Leaflet.Emoji</a><br>
+            <a href="https://twitter.com/nerik">@nerik</a> 🤙<br>
+          </h3>
+        </section>
+
 
       </div>
     </div>
@@ -477,6 +492,12 @@
       Reveal.initialize({
         history: true,
         controls: false,
+
+        	// Transition style
+        	transition: 'none', // none/fade/slide/convex/concave/zoom
+        	// Transition style for full page slide backgrounds
+        	backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
         // More info https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
@@ -485,10 +506,10 @@
           { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ]
       });
-      var earth = document.querySelector('.js-earth');
+      var earth = document.querySelectorAll('.js-earth');
       var currentEarth = 0;
       setInterval(function() {
-        earth.innerHTML = ['🌎', '🌍', '🌏'][currentEarth];
+        earth[0].innerHTML = earth[1].innerHTML = ['🌎', '🌍', '🌏'][currentEarth];
         currentEarth = (currentEarth === 2) ? 0 : currentEarth + 1;
       }, 300);
 
