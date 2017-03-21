@@ -50,6 +50,14 @@
           <img src="img/vizz-logo.gif" class="stretch">
         </section>
 
+        <section data-background-image="img/vizz-gfw.png" data-background-size="contain"></section>
+        <section data-background-image="img/vizz-trase.gif" data-background-size="contain"></section>
+        <section data-background-image="img/vizz-fishing.gif" data-background-size="contain"></section>
+
+        <section>
+          <img src="img/vizz-bar.jpg" class="stretch">
+        </section>
+
         <section>
           <img src="img/carto.png" class="stretch">
         </section>
@@ -347,6 +355,7 @@
 
         <section data-background-image="img/NYC-bivariate.png" data-background-size="contain"></section>
         <section data-background-image="img/NYC3.png" data-background-size="contain"></section>
+        <section data-background-image="img/NYC-code.png" data-background-size="contain"></section>
 
         <section>
           <h3>Emojis are using the<br>Fitzpatrick scale<br></h3>
@@ -465,6 +474,109 @@
 
         <section data-background-image="img/hdi.png" data-background-size="contain"></section>
         <section data-background-image="img/NYC2.png" data-background-size="contain"></section>
+
+        <section>
+          <h1>🤖</h1>
+          <h2>And now for some technical details</h2>
+        </section>
+
+        <section>
+          <h3>PoC:</h3>
+          <ol>
+            <li>vector data (GeoJSON)</li>
+            <li>point-in-polygon (turf.js)</li>
+            <li>arrange in a grid</li>
+            <li>render to a string</li>
+            <li>?</li>
+            <li>Profit</li>
+          </ol>
+        </section>
+
+        <section>
+          <pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> emoji <span style="color:#e28964">=</span> L.emoji(geoJSON, {
+  emoji: <span style="color:#65b042">'👍'</span>,
+  size: <span style="color:#3387cc">30</span>
+}).addTo(map);
+          </pre>
+          <img src="img/doc/doc_size.png" alt="">
+        </section>
+
+        <section>
+          <pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> emoji <span style="color:#e28964">=</span> L.emoji(geoJSON, {
+  emoji: {
+    property: <span style="color:#65b042">'countryName'</span>,
+    values: {
+      <span style="color:#65b042">'United Kingdom'</span>: <span style="color:#65b042">'☂️'</span>
+    },
+    defaultValue: <span style="color:#65b042">'☀️️'</span>,
+    emptyValue: <span style="color:#65b042">'🐟'</span>
+  }
+}).addTo(map);
+</pre>
+          <img src="img/doc/doc_object.png" alt="">
+        </section>
+
+        <section>
+          <pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> emoji <span style="color:#e28964">=</span> L.emoji(geoJSON, {
+  emoji: <span style="color:#65b042">':sparkles:'</span>
+}).addTo(map);
+</pre>
+          <img src="img/doc/doc_shortcode.png" alt="">
+        </section>
+
+        <section>
+          <pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> emoji <span style="color:#e28964">=</span> L.emoji(geoJSON, {
+  emoji: {
+    property: <span style="color:#65b042">'hdi_2013'</span>,
+    classes: {
+      <span style="color:#65b042">'breaks'</span>: [    <span style="color:#3387cc">4.3</span>, <span style="color:#3387cc">4.6</span>, <span style="color:#3387cc">4.9</span>, <span style="color:#3387cc">5.4</span>    ],
+      <span style="color:#65b042">'emojis'</span>: [<span style="color:#65b042">'😵'</span>, <span style="color:#65b042">'🙁'</span>, <span style="color:#65b042">'😐'</span>, <span style="color:#65b042">'🙂'</span>, <span style="color:#65b042">'😃'</span>]
+    }
+  }
+}).addTo(map);
+</pre>
+        </section>
+
+        <section>
+          <pre style="background:#000;color:#f8f8f8"><span style="color:#99cf50">var</span> emoji <span style="color:#e28964">=</span> L.emoji(geoJSON, {
+  <span style="color:#89bdff">emoji</span>: <span style="color:#99cf50">function</span> (feature) {
+    <span style="color:#e28964">if</span> (<span style="color:#e28964">!</span>feature) {
+      <span style="color:#e28964">return</span> L.Emoji.EMPTY;
+    }
+    <span style="color:#e28964">return</span> L.Emoji.getShortcode(<span style="color:#65b042">':flag_'</span>
+      <span style="color:#e28964">+</span> feature.properties.iso2.<span style="color:#dad085">toLowerCase</span>() <span style="color:#e28964">+</span> <span style="color:#65b042">':'</span>);
+  }
+}).addTo(map);
+</pre>
+          <img src="img/doc/doc_function.png" alt="">
+        </section>
+
+        <section>
+          <h3>UTFGrid ?</h3>
+        </section>
+
+        <section data-background-image="img/utfgrid.png" data-background-size="contain"></section>
+
+        <section>
+          <h3>Plans for the Leaflet plugin</h3>
+          <ul>
+            <li>Get out of PoC</li>
+            <li>UTFGrid support</li>
+            <li>Points and lines</li>
+            <li>Emoticons support ;-)</li>
+            <li>Raster layers !</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Plans for conquering the 🌎</h3>
+          <ul>
+            <li>A live weather map ☁️⛈⛅️🌤☀️</li>
+            <li>Emoji Maps sandbox (geojson.io-like)</li>
+            <li>Emoji dataviz ?</li>
+            <li>More maps: The Emoji Atlas !</li>
+          </ul>
+        </section>
 
         <section>
           <h3>
